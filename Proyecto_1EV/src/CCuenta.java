@@ -18,9 +18,9 @@ public class CCuenta {
 
     public CCuenta(String nom, String cue, double sal, double tipo)
     {
-        nombre =nom;
-        cuenta=cue;
-        saldo=sal;
+        setNombre(nom);
+        setCuenta(cue);
+        setSaldo(sal);
     }
 
     public void asignarNombre(String nom) // Asignar Nombre
@@ -36,7 +36,7 @@ public class CCuenta {
 
     public double estado() // Estado
     {
-        return saldo;
+        return getSaldo();
     }
 
 
@@ -44,7 +44,7 @@ public class CCuenta {
     {
         if (cantidad<0)
             throw new Exception("No se puede ingresar una cantidad negativa");
-        saldo = saldo + cantidad;
+        setSaldo(getSaldo() + cantidad);
     }
 
     public void retirar(double cantidad) throws Exception
@@ -53,13 +53,13 @@ public class CCuenta {
             throw new Exception ("No se puede retirar una cantidad negativa");
         if (estado()< cantidad)
             throw new Exception ("No se hay suficiente saldo");
-        saldo = saldo - cantidad;
+        setSaldo(getSaldo() - cantidad);
     }
 
 
     public String obtenerCuenta()
     {
-        return cuenta;
+        return getCuenta();
     }
 
 
@@ -81,4 +81,20 @@ public class CCuenta {
     public void setTipoInteres(double tipoInteres) {
         this.tipoInteres = tipoInteres;
     }
+
+	private String getCuenta() {
+		return cuenta;
+	}
+
+	private void setCuenta(String cuenta) {
+		this.cuenta = cuenta;
+	}
+
+	private double getSaldo() {
+		return saldo;
+	}
+
+	private void setSaldo(double saldo) {
+		this.saldo = saldo;
+	}
 }
