@@ -12,7 +12,7 @@ public class CCuenta {
     private double tipoInteres;
 
 
-    public CCuenta()
+    public CCuenta() // Cuenta
     {
     }
 
@@ -23,18 +23,18 @@ public class CCuenta {
         saldo=sal;
     }
 
-    public void asignarNombre(String nom)
+    public void asignarNombre(String nom) // Asignar Nombre
     {
         setNombre(nom);
     }
 
-    public String obtenerNombre()
+    public String obtenerNombre() // Obtener Nombre
     {
         return getNombre();
     }
 
 
-    public double estado()
+    public double estado() // Estado
     {
         return saldo;
     }
