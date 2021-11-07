@@ -40,7 +40,7 @@ public class CCuenta {
     }
 
 
-    public void ingresar(double cantidad) throws Exception
+    public void ingresar(double cantidad) throws Exception // INgresar
     {
         if (cantidad<0)
             throw new Exception("No se puede ingresar una cantidad negativa");
